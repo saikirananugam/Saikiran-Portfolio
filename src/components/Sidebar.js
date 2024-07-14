@@ -1,9 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaTimes, FaHome } from 'react-icons/fa';
+import { FaTimes } from 'react-icons/fa';
 
 const Sidebar = ({ isOpen, setIsOpen, setCurrentSection, currentSection }) => {
-  const navItems = ['Home', 'About', 'Experience', 'Education', 'Research', 'Skills', 'Projects', 'Contact'];
+  const navItems = ['Home', 'About', 'Experience', 'Education', 'Research', 'Projects', 'Services', 'Contact'];
 
   return (
     <motion.div 
@@ -25,11 +25,10 @@ const Sidebar = ({ isOpen, setIsOpen, setCurrentSection, currentSection }) => {
                     setCurrentSection(item.toLowerCase());
                     setIsOpen(false);
                   }}
-                  className={`flex items-center w-full text-left text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 ${
+                  className={`block text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 ${
                     currentSection === item.toLowerCase() ? 'font-bold' : ''
                   }`}
                 >
-                  {item === 'Home' ? <FaHome className="mr-2" /> : null}
                   {item}
                 </button>
               </li>

@@ -1,37 +1,28 @@
 import React from 'react';
-import { motion } from 'framer-motion';
-import { FaBars, FaMoon, FaSun, FaHome } from 'react-icons/fa';
+import { FaMoon, FaSun, FaBars } from 'react-icons/fa';
 
-const Header = ({ isMenuOpen, setIsMenuOpen, isDarkMode, setIsDarkMode, currentSection, setCurrentSection }) => {
-  const navItems = ['Home', 'About', 'Experience', 'Education', 'Research', 'Skills', 'Projects', 'Contact'];
+const Header = ({ isMenuOpen, setIsMenuOpen, isDarkMode, toggleDarkMode, currentSection, setCurrentSection }) => {
+  const navItems = ['Home', 'About', 'Experience', 'Education', 'Research', 'Projects', 'Services', 'Contact'];
 
   return (
-    <motion.header 
-      className="fixed w-full z-50 bg-white dark:bg-gray-800 shadow-lg"
-      initial={{ y: -100 }}
-      animate={{ y: 0 }}
-      transition={{ duration: 0.5 }}
-    >
+    <header className="fixed w-full bg-white dark:bg-gray-800 shadow-md z-50">
       <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-        <button 
-          onClick={() => setCurrentSection('home')} 
-          className="text-2xl font-bold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors"
-        >
-          Dubasi Pavan Kumar
-        </button>
+        <h1 className="text-2xl font-bold text-blue-600 dark:text-blue-400 cursor-pointer" onClick={() => setCurrentSection('home')}>
+          DPK
+        </h1>
         <nav className="hidden md:flex items-center space-x-4">
           {navItems.map((item) => (
-            <button 
+            <button
               key={item}
               onClick={() => setCurrentSection(item.toLowerCase())}
               className={`text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 ${
                 currentSection === item.toLowerCase() ? 'font-bold' : ''
               }`}
             >
-              {item === 'Home' ? <FaHome /> : item}
+              {item}
             </button>
           ))}
-          <button onClick={() => setIsDarkMode(!isDarkMode)} className="text-gray-600 dark:text-gray-300">
+          <button onClick={toggleDarkMode} className="text-gray-600 dark:text-gray-300">
             {isDarkMode ? <FaSun /> : <FaMoon />}
           </button>
         </nav>
@@ -39,7 +30,7 @@ const Header = ({ isMenuOpen, setIsMenuOpen, isDarkMode, setIsDarkMode, currentS
           <FaBars />
         </button>
       </div>
-    </motion.header>
+    </header>
   );
 };
 

@@ -1,3 +1,49 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* Custom cursor styles */
+.custom-cursor {
+  @apply w-5 h-5 border-2 border-blue-500 rounded-full fixed pointer-events-none z-60 transition-all duration-100 ease-out mix-blend-difference;
+}
+
+.custom-cursor.hidden {
+  @apply opacity-0;
+}
+
+.custom-cursor.clicked {
+  @apply scale-90 bg-blue-500;
+}
+
+.custom-cursor.link-hovered {
+  @apply scale-150 bg-blue-500 bg-opacity-10;
+}
+
+.dark .custom-cursor {
+  @apply border-blue-400;
+}
+
+.dark .custom-cursor.clicked {
+  @apply bg-blue-400;
+}
+
+/* Ensure all interactive elements have no cursor */
+@layer base {
+  button, a, input[type="submit"], input[type="button"], .interactive {
+    @apply cursor-none;
+  }
+
+  * {
+    @apply cursor-none;
+  }
+}
+
+/* Show default cursor on touch devices */
+@media (hover: none) and (pointer: coarse) {
+  * {
+    cursor: auto;
+  }
+  .custom-cursor {
+    @apply hidden;
+  }
+}
