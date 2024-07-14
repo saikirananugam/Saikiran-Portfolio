@@ -30,4 +30,4 @@ To learn more about the technologies used in this project, check out the followi
 
 ## Contact
 
-For any inquiries, please reach out to Dubasi Pavan Kumar at [your-email@example.com].
+For any inquiries, please reach out to Dubasi Pavan Kumar at [pavankumard.pg19.ma@nitp.ac.in].
