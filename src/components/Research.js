@@ -4,7 +4,7 @@ import { FaFileAlt, FaBook, FaCertificate } from 'react-icons/fa';
 
 const Research = () => {
   const thesis = {
-    title: "ENHANCING HEALTHCARE INSURANCE FRAUD DETECTION AND PREVENTION WITH A MACHINE LEARNING AND BLOCKCHAIN-BASED APPROACH",
+    title: "Enhancing Healthcare Insurance Fraud Detection and Prevention with a Machine Learning and Blockchain-Based Approach",
     supervisor: "Dr. Rajesh Kumar Sinha, Assistant Professor",
     department: "Department of Mathematics",
     institution: "National Institute of Technology Patna",
@@ -58,51 +58,53 @@ const Research = () => {
         </motion.h2>
         
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
+          whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-2xl font-bold">Thesis</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Thesis</h3>
             <FaBook className="text-4xl text-blue-600 dark:text-blue-400" />
           </div>
-          <p className="text-lg mb-2">
+          <p className="text-lg mb-2 text-gray-700 dark:text-gray-300">
             <strong>Title:</strong> {thesis.title}
           </p>
-          <p className="mb-2"><strong>Supervisor:</strong> {thesis.supervisor}</p>
-          <p className="mb-2"><strong>Department:</strong> {thesis.department}</p>
-          <p className="mb-2"><strong>Institution:</strong> {thesis.institution}</p>
-          <p className="mb-2"><strong>Period:</strong> {thesis.period}</p>
+          <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Supervisor:</strong> {thesis.supervisor}</p>
+          <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Department:</strong> {thesis.department}</p>
+          <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Institution:</strong> {thesis.institution}</p>
+          <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Period:</strong> {thesis.period}</p>
           <div className="mt-4">
-            <a href={thesis.pdfLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800 mr-4">
+            <a href={thesis.pdfLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800 mr-4">
               View Thesis PDF
             </a>
-            <a href={thesis.codeLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+            <a href={thesis.codeLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800">
               View Code
             </a>
           </div>
         </motion.div>
 
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 mb-8 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
+          whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-2xl font-bold">Publications</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Publications</h3>
             <FaFileAlt className="text-4xl text-blue-600 dark:text-blue-400" />
           </div>
           <ul className="space-y-6">
             {publications.map((pub, index) => (
-              <li key={index} className="border-b pb-4 last:border-b-0 last:pb-0">
-                <p className="font-semibold">{pub.title}</p>
-                <p>Authors: {pub.authors}</p>
-                <p>{pub.conference || pub.journal}</p>
-                {pub.status && <p>{pub.status}</p>}
-                {pub.details && <p>{pub.details}</p>}
-                <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              <li key={index} className="border-b border-gray-300 dark:border-gray-700 pb-4 last:border-b-0 last:pb-0">
+                <p className="font-semibold text-gray-800 dark:text-gray-200">{pub.title}</p>
+                <p className="text-gray-700 dark:text-gray-300">Authors: {pub.authors}</p>
+                <p className="text-gray-700 dark:text-gray-300">{pub.conference || pub.journal}</p>
+                {pub.status && <p className="text-gray-700 dark:text-gray-300">{pub.status}</p>}
+                {pub.details && <p className="text-gray-700 dark:text-gray-300">{pub.details}</p>}
+                <a href={pub.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800">
                   View Publication
                 </a>
               </li>
@@ -111,22 +113,23 @@ const Research = () => {
         </motion.div>
 
         <motion.div
-          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6"
+          className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 max-w-4xl mx-auto"
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
+          whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-2xl font-bold">Patents</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Patents</h3>
             <FaCertificate className="text-4xl text-blue-600 dark:text-blue-400" />
           </div>
           <ul className="space-y-6">
             {patents.map((patent, index) => (
-              <li key={index} className="border-b pb-4 last:border-b-0 last:pb-0">
-                <p className="font-semibold">{patent.title}</p>
-                <p>Inventors: {patent.inventors}</p>
-                <p>{patent.details}</p>
-                <a href={patent.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-800">
+              <li key={index} className="border-b border-gray-300 dark:border-gray-700 pb-4 last:border-b-0 last:pb-0">
+                <p className="font-semibold text-gray-800 dark:text-gray-200">{patent.title}</p>
+                <p className="text-gray-700 dark:text-gray-300">Inventors: {patent.inventors}</p>
+                <p className="text-gray-700 dark:text-gray-300">{patent.details}</p>
+                <a href={patent.link} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800">
                   View Patent
                 </a>
               </li>

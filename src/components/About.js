@@ -1,8 +1,9 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { FaDownload, FaArrowRight } from 'react-icons/fa';
 import profileImage from '../images/PHOTO.jpg';
 
-const About = () => {
+const About = ({ setCurrentSection }) => {
   const resumeLink = "https://bit.ly/resumePavan"; // Replace with your actual resume link
 
   return (
@@ -37,14 +38,24 @@ const About = () => {
             <p className="text-lg text-gray-700 mb-4">
               My research explores intricate fields such as machine learning and blockchain technology, with the goal of harnessing these disciplines to drive practical innovations and solutions.
             </p>
-            <a 
-              href={resumeLink} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className="inline-block bg-blue-600 text-white font-bold py-2 px-4 rounded hover:bg-blue-700 transition duration-300"
-            >
-              Download Resume
-            </a>
+            <div className="flex space-x-4 justify-center">
+              <a 
+                href={resumeLink} 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg flex items-center"
+              >
+                <FaDownload className="mr-2" />
+                Resume
+              </a>
+              <button
+                onClick={() => setCurrentSection('services')}
+                className="text-blue-600 dark:text-blue-400 flex items-center group text-xl bg-white px-8 py-3 rounded-full hover:bg-gray-100 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg"
+              >
+                Hire Me 
+                <FaArrowRight className="ml-2 group-hover:translate-x-1 transition-transform duration-300" />
+              </button>
+            </div>
           </motion.div>
         </div>
       </div>

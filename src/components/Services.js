@@ -57,7 +57,7 @@ const Services = () => {
           {services.map((service, index) => (
             <motion.div
               key={index}
-              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-xl transition-shadow duration-300"
+              className="bg-white dark:bg-gray-800 rounded-lg shadow-lg p-6 hover:shadow-2xl transition-shadow duration-300 transform hover:-translate-y-2"
               initial={{ opacity: 0, y: 50 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
@@ -65,11 +65,13 @@ const Services = () => {
               <div className="text-blue-600 dark:text-blue-400">{service.icon}</div>
               <h3 className="text-2xl font-semibold mb-4 text-gray-800 dark:text-gray-200">{service.title}</h3>
               <p className="text-gray-600 dark:text-gray-400 mb-4">{service.description}</p>
-              <ul className="list-disc list-inside text-gray-600 dark:text-gray-400">
-                {service.tasks.map((task, taskIndex) => (
-                  <li key={taskIndex}>{task}</li>
+              <div className="flex flex-wrap mb-4">
+                {service.tasks.map((task) => (
+                  <span key={task} className="bg-blue-100 dark:bg-blue-900 text-blue-800 dark:text-blue-200 rounded-full px-3 py-1 text-sm font-semibold mr-2 mb-2">
+                    {task}
+                  </span>
                 ))}
-              </ul>
+              </div>
             </motion.div>
           ))}
         </div>
@@ -81,7 +83,7 @@ const Services = () => {
         >
           <a 
             href="mailto:your.email@example.com" 
-            className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300"
+            className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg"
           >
             Get in Touch
           </a>
