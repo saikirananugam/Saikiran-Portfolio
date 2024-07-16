@@ -51,7 +51,7 @@ const Experience = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
-          Professional experience
+          Professional Experience
         </motion.h2>
         <VerticalTimeline>
           {sortedExperiences.map((exp, index) => (

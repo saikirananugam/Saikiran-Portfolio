@@ -9,7 +9,7 @@ const Research = () => {
     department: "Department of Mathematics",
     institution: "National Institute of Technology Patna",
     period: "July – December, 2023",
-    codeLink: "https://github.com/yourusername/thesis-code",
+    codeLink: "https://github.com/ascender1729/HealthFraudMLChain",
     pdfLink: "https://yourwebsite.com/path-to-thesis.pdf"
   };
 
@@ -26,7 +26,7 @@ const Research = () => {
       authors: "Adhyaru, K., Ishan, Harshitha, D., Mundlur, R.P., Dubali Pavan Kumar, et al.",
       journal: "International Journal of All Research Education and Scientific Methods (IJARESM)",
       details: "ISSN: 2455-6211, Vol. 11, Issue 7, July 2023, pp. 2455-2467",
-      link: "https://journal-website.com/your-paper"
+      link: "https://www.ijaresm.com/a-study-on-facial-feature-extraction-and-emotional-analysis-using-ml"
     }
   ];
 
@@ -35,13 +35,13 @@ const Research = () => {
       title: "AI-Enabled Robotic Device for Business Automation",
       inventors: "Kousar, H., Dubasi Pavan Kumar, Mohammed, S.A., et al.",
       details: "UK Design Registration No. 6335588, Grant Date: 10 January 2024",
-      link: "https://patent-office.gov/your-patent"
+      link: "https://www.registered-design.service.gov.uk/find/6335588"
     },
     {
       title: "Emotion Recognition and Analysis System for Mental Health Assessment",
       inventors: "Navaneethakrishan, S.R., Chinta, S., Dubasi Pavan Kumar, et al.",
       details: "The Patent Office Journal, 29/09/2023, No. 39/2023, pp. 64318-64802",
-      link: "https://patent-office.gov/your-patent"
+      link: "https://www.search.ipindia.gov.in/IPOJournal/Journal/Patent"
     }
   ];
 

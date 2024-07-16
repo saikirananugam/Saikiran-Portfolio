@@ -2,15 +2,22 @@ import React, { useEffect, useState } from 'react';
 import AnimatedCursor from 'react-animated-cursor';
 
 const AnimatedCursorComponent = ({ children }) => {
-  const [isMounted, setIsMounted] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(window.innerWidth > 1024);
 
   useEffect(() => {
-    setIsMounted(true);
+    const handleResize = () => {
+      setIsDesktop(window.innerWidth > 1024);
+    };
+
+    window.addEventListener('resize', handleResize);
+
+    // Clean up the event listener when the component unmounts
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
     <>
-      {isMounted && (
+      {isDesktop && (
         <AnimatedCursor
           innerSize={10}
           outerSize={42}

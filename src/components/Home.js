@@ -1,14 +1,20 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { FaArrowRight, FaCode, FaDatabase, FaRobot, FaChartLine, FaGraduationCap, FaPaperPlane } from 'react-icons/fa';
+import { FaArrowRight, FaCode, FaDatabase, FaRobot, FaChartLine, FaGraduationCap, FaPaperPlane, FaGlobe, FaChartArea } from 'react-icons/fa';
 
-const LatestUpdates = [
+const LatestUpdates =  [
   { title: "Research on ML-driven Fraud Detection", icon: <FaRobot />, color: "bg-blue-100 dark:bg-blue-900" },
   { title: "Published Paper on Blockchain in Healthcare", icon: <FaPaperPlane />, color: "bg-green-100 dark:bg-green-900" },
   { title: "Completed Data Science Project", icon: <FaChartLine />, color: "bg-purple-100 dark:bg-purple-900" },
   { title: "Graduated with Integrated MSc in Mathematics", icon: <FaGraduationCap />, color: "bg-yellow-100 dark:bg-yellow-900" },
   { title: "Developed Full-Stack Web Application", icon: <FaCode />, color: "bg-red-100 dark:bg-red-900" },
   { title: "Implemented Advanced Database Solution", icon: <FaDatabase />, color: "bg-indigo-100 dark:bg-indigo-900" },
+  // Adding new project entries in the desired format
+  { title: "Advanced Sentiment Analysis with SentiTweet", icon: <FaGlobe />, color: "bg-teal-100 dark:bg-teal-900" },
+  { title: "Code Review Enhancement with CodeSage", icon: <FaCode />, color: "bg-orange-100 dark:bg-orange-900" },
+  { title: "Real-Time Sentiment Analysis with SentiPulse", icon: <FaChartArea />, color: "bg-lime-100 dark:bg-lime-900" },
+  { title: "Risk Management for Crypto Trading with ByBit Calculator", icon: <FaDatabase />, color: "bg-pink-100 dark:bg-pink-900" },
+  { title: "Speech to Text Conversion with AudioDictate", icon: <FaRobot />, color: "bg-cyan-100 dark:bg-cyan-900" }
 ];
 
 const Home = ({ setCurrentSection }) => {
@@ -37,9 +43,9 @@ const Home = ({ setCurrentSection }) => {
       clearInterval(scrollInterval);
     };
 
-    startScroll();
     scrollElement.addEventListener('mouseenter', stopScroll);
     scrollElement.addEventListener('mouseleave', startScroll);
+    startScroll();
 
     return () => {
       stopScroll();

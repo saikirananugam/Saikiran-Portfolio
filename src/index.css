@@ -19,6 +19,7 @@
   @apply scale-150 bg-blue-500 bg-opacity-10;
 }
 
+/* Dark mode specific styles */
 .dark .custom-cursor {
   @apply border-blue-400;
 }
@@ -33,6 +34,7 @@
     @apply cursor-none;
   }
 
+  /* Apply cursor-none to all elements to enforce custom cursor only */
   * {
     @apply cursor-none;
   }
@@ -41,9 +43,9 @@
 /* Show default cursor on touch devices */
 @media (hover: none) and (pointer: coarse) {
   * {
-    cursor: auto;
+    @apply cursor-auto; /* Ensures cursor visibility on non-pointing devices */
   }
   .custom-cursor {
-    @apply hidden;
+    @apply hidden; /* Hide custom cursor on touch devices */
   }
 }

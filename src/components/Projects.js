@@ -31,6 +31,13 @@ const projects = [
     technologies: ["Python", "Tkinter", "Vosk", "PyDub"],
     domains: ["AI", "Software Development"],
     link: "https://github.com/ascender1729/AudioDictate"
+  },
+  {
+    title: "SentiTweet",
+    description: "A powerful sentiment analysis tool that leverages AWS Comprehend and TextBlob to analyze the sentiment of text inputs. It provides both a command-line interface and a web application for flexible usage, making it easy to understand the emotional tone of text data.",
+    technologies: ["Python", "Flask", "AWS Comprehend", "TextBlob", "pandas", "matplotlib", "seaborn", "Chart.js"],
+    domains: ["AI", "Web Development"],
+    link: "https://github.com/ascender1729/sentitweet"
   }
 ];
 

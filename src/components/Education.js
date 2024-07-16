@@ -37,7 +37,7 @@ const educations = [
 
 const Education = () => {
   return (
-    <section id="education" className="py-20 bg-white dark:bg-gray-800">
+    <section id="education" className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.h2 
           className="text-4xl font-bold mb-12 text-center text-blue-600 dark:text-blue-400"
@@ -61,7 +61,7 @@ const Education = () => {
                 <img 
                   src={edu.logo}
                   alt={`${edu.institution} logo`}
-                  className="w-full h-full object-contain p-2"
+                  className="w-full h-full object-contain p-1"
                 />
               }
             >
