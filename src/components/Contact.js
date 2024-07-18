@@ -8,33 +8,15 @@ const Contact = () => {
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = async (e) => {
+  const handleSubmit = (e) => {
     e.preventDefault();
-    setStatus('Sending...');
-    try {
-      const response = await fetch('http://localhost:5000/api/contact', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(formData),
-      });
-      if (response.ok) {
-        setStatus('Message sent successfully!');
-        setFormData({ name: '', email: '', message: '' });
-      } else {
-        setStatus('Failed to send message. Please try again.');
-      }
-    } catch (error) {
-      console.error('Error:', error);
-      setStatus('An error occurred. Please try again later.');
-    }
+    // Handle form submission here
+    console.log(formData);
   };
 
   return (
@@ -93,7 +75,6 @@ const Contact = () => {
               Send Message
             </button>
           </form>
-          {status && <p className="mt-4 text-center text-green-600 dark:text-green-400">{status}</p>}
         </div>
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Connect with me</h3>
@@ -107,7 +88,7 @@ const Contact = () => {
             <a href="https://twitter.com/the_complex_one" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-400 p-3 rounded-full hover:bg-blue-500 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaTwitter size={32} />
             </a>
-            <a href="mailto:pavankumar.dubasi2019@gmail.com" className="text-white bg-red-600 p-3 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
+            <a href="mailto:your.email@example.com" className="text-white bg-red-600 p-3 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaEnvelope size={32} />
             </a>
           </div>
