@@ -1,5 +1,5 @@
 const express = require('express');
-const nodemailer = require('nodemailer');
+const { google } = require('googleapis');
 const cors = require('cors');
 require('dotenv').config();
 
@@ -9,39 +9,71 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Nodemailer transporter
-let transporter = nodemailer.createTransport({
-  service: 'gmail',
-  auth: {
-    user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS
-  }
+// Configure OAuth2 client
+const oauth2Client = new google.auth.OAuth2(
+  process.env.GMAIL_CLIENT_ID,
+  process.env.GMAIL_CLIENT_SECRET,
+  process.env.GMAIL_REDIRECT_URI
+);
+
+oauth2Client.setCredentials({
+  refresh_token: process.env.GMAIL_REFRESH_TOKEN
 });
 
+const gmail = google.gmail({ version: 'v1', auth: oauth2Client });
+
+// Function to send email
+async function sendEmail(to, subject, message) {
+  const utf8Subject = `=?utf-8?B?${Buffer.from(subject).toString('base64')}?=`;
+  const messageParts = [
+    `To: ${to}`,
+    'Content-Type: text/html; charset=utf-8',
+    'MIME-Version: 1.0',
+    `Subject: ${utf8Subject}`,
+    '',
+    message
+  ];
+  const messageRaw = messageParts.join('\n');
+
+  const encodedMessage = Buffer.from(messageRaw)
+    .toString('base64')
+    .replace(/\+/g, '-')
+    .replace(/\//g, '_')
+    .replace(/=+$/, '');
+
+  try {
+    const res = await gmail.users.messages.send({
+      userId: 'me',
+      requestBody: {
+        raw: encodedMessage,
+      },
+    });
+    return res.data;
+  } catch (error) {
+    console.error('Error sending email:', error);
+    throw error;
+  }
+}
+
 // POST route for form submission
-app.post('/api/contact', (req, res) => {
-  const { name, email, message } = req.body;
+app.post('/api/contact', async (req, res) => {
+  const { name, email, mobile, message } = req.body;
 
-  const mailOptions = {
-    from: process.env.EMAIL_USER,
-    to: process.env.EMAIL_USER, // Send to yourself
-    subject: `New contact form submission from ${name}`,
-    text: `
-      Name: ${name}
-      Email: ${email}
-      Message: ${message}
-    `
-  };
+  const emailContent = `
+    <h2>New Contact Form Submission</h2>
+    <p><strong>Name:</strong> ${name}</p>
+    <p><strong>Email:</strong> ${email}</p>
+    <p><strong>Mobile:</strong> ${mobile}</p>
+    <p><strong>Message:</strong> ${message}</p>
+  `;
 
-  transporter.sendMail(mailOptions, (error, info) => {
-    if (error) {
-      console.log(error);
-      res.status(500).send('Error sending email');
-    } else {
-      console.log('Email sent: ' + info.response);
-      res.status(200).send('Email sent successfully');
-    }
-  });
+  try {
+    await sendEmail('pavankumar.dubasi2019@gmail.com', `New contact from ${name}`, emailContent);
+    res.status(200).send('Email sent successfully');
+  } catch (error) {
+    console.error('Error in /api/contact:', error);
+    res.status(500).send('Error sending email');
+  }
 });
 
 const PORT = process.env.PORT || 5000;

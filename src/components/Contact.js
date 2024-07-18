@@ -6,17 +6,36 @@ const Contact = () => {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    mobile: '',
     message: '',
   });
+  const [status, setStatus] = useState('');
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+    setStatus('Sending...');
+    try {
+      const response = await fetch('http://localhost:5000/api/contact', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+      if (response.ok) {
+        setStatus('Message sent successfully!');
+        setFormData({ name: '', email: '', mobile: '', message: '' });
+      } else {
+        setStatus('Failed to send message. Please try again.');
+      }
+    } catch (error) {
+      console.error('Error:', error);
+      setStatus('An error occurred. Please try again later.');
+    }
   };
 
   return (
@@ -57,6 +76,18 @@ const Contact = () => {
               />
             </div>
             <div>
+              <label htmlFor="mobile" className="block text-gray-700 dark:text-gray-300 mb-2">Mobile Number</label>
+              <input
+                type="tel"
+                id="mobile"
+                name="mobile"
+                value={formData.mobile}
+                onChange={handleChange}
+                required
+                className="w-full px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 dark:bg-gray-700 dark:text-gray-300 transition duration-300"
+              />
+            </div>
+            <div>
               <label htmlFor="message" className="block text-gray-700 dark:text-gray-300 mb-2">Message</label>
               <textarea
                 id="message"
@@ -75,6 +106,7 @@ const Contact = () => {
               Send Message
             </button>
           </form>
+          {status && <p className="mt-4 text-center text-green-600 dark:text-green-400">{status}</p>}
         </div>
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Connect with me</h3>
@@ -88,7 +120,7 @@ const Contact = () => {
             <a href="https://twitter.com/the_complex_one" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-400 p-3 rounded-full hover:bg-blue-500 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaTwitter size={32} />
             </a>
-            <a href="mailto:your.email@example.com" className="text-white bg-red-600 p-3 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
+            <a href="mailto:pavankumar.dubasi2019@gmail.com" className="text-white bg-red-600 p-3 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaEnvelope size={32} />
             </a>
           </div>
