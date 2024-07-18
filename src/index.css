@@ -49,3 +49,28 @@
     @apply hidden; /* Hide custom cursor on touch devices */
   }
 }
+.scrollContainer {
+  position: relative;
+  overflow: hidden;
+}
+
+.scrollContainer::before,
+.scrollContainer::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 50px; /* Narrower width for a subtler effect */
+  pointer-events: none;
+  z-index: 10;
+}
+
+.scrollContainer::before {
+  left: 0;
+  background: linear-gradient(to right, rgba(0,0,0,1), rgba(0,0,0,0));
+}
+
+.scrollContainer::after {
+  right: 0;
+  background: linear-gradient(to left, rgba(0,0,0,1), rgba(0,0,0,0));
+}
