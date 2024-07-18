@@ -5,12 +5,12 @@ import { FaFileAlt, FaBook, FaCertificate } from 'react-icons/fa';
 const Research = () => {
   const thesis = {
     title: "Enhancing Healthcare Insurance Fraud Detection and Prevention with a Machine Learning and Blockchain-Based Approach",
-    supervisor: "Dr. Rajesh Kumar Sinha, Assistant Professor",
+    supervisor: "Dr. Rajesh Kumar Sinha, Associate Professor",
     department: "Department of Mathematics",
     institution: "National Institute of Technology Patna",
-    period: "July – December, 2023",
+    period: "July, 2023 – June, 2024",
     codeLink: "https://github.com/ascender1729/HealthFraudMLChain",
-    pdfLink: "https://yourwebsite.com/path-to-thesis.pdf"
+    pdfLink: "https://www.google.com"
   };
 
   const publications = [
@@ -19,7 +19,7 @@ const Research = () => {
       authors: "Dubasi Pavan Kumar, Bhadula, S., et al.",
       conference: "2024 International Conference on Communication, Computer Sciences and Engineering (IC3SE)",
       status: "Accepted, to be published",
-      link: "https://conference-website.com/your-paper"
+      link: "https://ieeexplore.ieee.org/Xplore/login.jsp?url=%2Fxplore%2Fhome.jsp&authDecision=-203"
     },
     {
       title: "A Study on Facial Feature Extraction and Emotional Analysis Using ML",
@@ -65,7 +65,7 @@ const Research = () => {
           whileHover={{ scale: 1.05 }}
         >
           <div className="flex items-center justify-between mb-4">
-            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Thesis</h3>
+            <h3 className="text-2xl font-bold text-gray-800 dark:text-gray-200">Dissertation</h3>
             <FaBook className="text-4xl text-blue-600 dark:text-blue-400" />
           </div>
           <p className="text-lg mb-2 text-gray-700 dark:text-gray-300">
