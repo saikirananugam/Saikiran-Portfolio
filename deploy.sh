@@ -1,8 +1,10 @@
+#!/bin/bash
+
 # Build the project
 npm run build
 
 # Create CNAME file
-"dubasipavankumar.com" | Out-File -FilePath ".\build\CNAME" -Encoding ascii
+echo "dubasipavankumar.com" > build/CNAME
 
 # Deploy to gh-pages branch
 npm run deploy
@@ -12,4 +14,4 @@ git add .
 git commit -m "Deploy to GitHub Pages"
 git push origin main
 
-Write-Host "Deployment complete!"
+echo "Deployment complete!"
