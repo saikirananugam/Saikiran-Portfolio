@@ -1,42 +1,96 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { FaCode, FaChartLine, FaLaptopCode } from 'react-icons/fa';
+import { FaBrain, FaCode, FaChartLine, FaNetworkWired, FaTools, FaBookOpen } from 'react-icons/fa';
 
 const services = [
   {
-    title: "Data Science",
+    title: "Data Science & Analytics",
     icon: <FaChartLine className="text-4xl mb-4" />,
-    description: "Leveraging data to drive insights and make informed decisions.",
+    description: "Empowering decisions with data-driven insights using advanced analytics, machine learning, and blockchain-enhanced data security.",
     tasks: [
-      "Data Analysis",
-      "Machine Learning",
-      "Statistical Modeling",
+      "Healthcare Fraud Detection",
+      "Predictive Modeling",
+      "Statistical Analysis",
       "Data Visualization",
-      "Predictive Analytics"
+      "Blockchain-enhanced Data Security",
+      "Big Data Processing",
+      "Time Series Forecasting",
+      "Data Mining Techniques"
     ]
   },
   {
-    title: "Software Development",
+    title: "Software & Web Development",
     icon: <FaCode className="text-4xl mb-4" />,
-    description: "Building robust and scalable software solutions tailored to your needs.",
+    description: "Designing and developing high-quality, scalable software solutions across web and mobile platforms, including API design and integration.",
     tasks: [
-      "Web Development",
-      "Mobile App Development",
-      "API Development",
-      "Database Design",
-      "System Architecture"
+      "Full-stack Web Development",
+      "Mobile Applications",
+      "API Design and Integration",
+      "Cloud Solutions with AWS",
+      "Real-time Systems",
+      "UX/UI Design",
+      "Database Management",
+      "Security Compliance"
     ]
   },
   {
-    title: "Freelance Services",
-    icon: <FaLaptopCode className="text-4xl mb-4" />,
-    description: "Offering flexible, on-demand expertise for your projects.",
+    title: "Research & Development",
+    icon: <FaBookOpen className="text-4xl mb-4" />,
+    description: "Engaging in cutting-edge research and innovation in AI, blockchain, and speech recognition technologies, including academic publications and collaborative projects.",
     tasks: [
-      "Project-based Work",
-      "Consulting",
-      "Code Reviews",
-      "Technical Writing",
-      "Proof of Concept Development"
+      "Academic Research",
+      "Technology Innovation",
+      "Patent Filing",
+      "Collaborative Projects",
+      "Grant Writing",
+      "Experimental Prototyping",
+      "Scientific Analysis",
+      "Data Ethics"
+    ]
+  },
+  {
+    title: "Technical Consulting & Strategy",
+    icon: <FaTools className="text-4xl mb-4" />,
+    description: "Providing expert advice and strategic planning to help businesses navigate and integrate complex technical solutions, focusing on modernization and efficiency.",
+    tasks: [
+      "Systems Analysis",
+      "Tech Stack Modernization",
+      "IT Strategy Planning",
+      "Project Management",
+      "Digital Transformation",
+      "Technology Assessment",
+      "Business Intelligence",
+      "Change Management"
+    ]
+  },
+  {
+    title: "Blockchain & Security",
+    icon: <FaNetworkWired className="text-4xl mb-4" />,
+    description: "Implementing secure, decentralized technology solutions with blockchain, advanced encryption, and cryptographic security.",
+    tasks: [
+      "Smart Contracts",
+      "Decentralized Applications (DApps)",
+      "Cryptography & Data Security",
+      "Blockchain for Business",
+      "Secure Transactions",
+      "Tokenization Strategies",
+      "Ledger Integration",
+      "Regulatory Compliance"
+    ]
+  },
+  {
+    title: "AI & Machine Learning",
+    icon: <FaBrain className="text-4xl mb-4" />,
+    description: "Developing cutting-edge AI solutions, including deep learning, neural networks, and NLP to drive innovation and efficiency.",
+    tasks: [
+      "Custom Machine Learning Models",
+      "Deep Learning & Neural Networks",
+      "Natural Language Processing",
+      "AI-Driven Data Analysis",
+      "AI Integration in Existing Systems",
+      "Computer Vision",
+      "Reinforcement Learning",
+      "Algorithm Optimization"
     ]
   }
 ];
@@ -82,7 +136,7 @@ const Services = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
         >
           <a 
-            href="mailto:your.email@example.com" 
+            href="mailto:pavankumar.dubasi2019@gmail.com" 
             className="bg-blue-600 text-white px-8 py-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg"
           >
             Get in Touch

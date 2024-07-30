@@ -18,8 +18,8 @@ const Research = () => {
       title: "Artistic Style Transfer using Generative Adversarial Networks: A Pix2Pix Implementation",
       authors: "Dubasi Pavan Kumar, Bhadula, S., et al.",
       conference: "2024 International Conference on Communication, Computer Sciences and Engineering (IC3SE)",
-      status: "Accepted, to be published",
-      link: "https://ieeexplore.ieee.org/Xplore/login.jsp?url=%2Fxplore%2Fhome.jsp&authDecision=-203"
+      details: "Date of Conference: 09-11 May 2024, Date Added to IEEE Xplore: 23 July 2024, Electronic ISBN: 979-8-3503-6684-6, Print on Demand(PoD) ISBN: 979-8-3503-6685-3, DOI: 10.1109/IC3SE62002.2024.10592950, Publisher: IEEE",
+      link: "https://ieeexplore.ieee.org/document/10592950"
     },
     {
       title: "A Study on Facial Feature Extraction and Emotional Analysis Using ML",

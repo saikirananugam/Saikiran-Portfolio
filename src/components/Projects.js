@@ -1,9 +1,31 @@
 import React, { useState } from 'react';
 import Select from 'react-select';
 import { motion } from 'framer-motion';
-import { FaGithub } from 'react-icons/fa';
+import { FaGithub, FaGamepad } from 'react-icons/fa';
 
 const projects = [
+  {
+    title: "Cosmic Defender",
+    description: "Navigate through an asteroid field, destroy incoming threats, and collect power-ups to survive as long as possible in this exciting 3D space shooter game built with Three.js.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "Howler.js"],
+    domains: ["Web Development", "Game Development"],
+    link: "https://github.com/ascender1729/asteroid-dodge",
+    playLink: "https://ascender1729.github.io/asteroid-dodge/"
+  },
+  {
+    title: "QuantumWaste",
+    description: "Leverages quantum-inspired algorithms and machine learning to simulate and optimize the recycling process for complex polymers, combining quantum computing concepts with materials science.",
+    technologies: ["React.js", "Flask", "Three.js", "Material-UI", "PennyLane", "Scikit-learn", "NumPy", "Joblib"],
+    domains: ["Web Development", "Data Science", "Quantum Computing"],
+    link: "https://github.com/ascender1729/QuantumWaste"
+  },
+  {
+    title: "Urban Soundscape Harmonizer",
+    description: "Monitors and analyzes urban noise levels in real-time across major Indian cities, leveraging IoT simulations, machine learning, and data visualization techniques.",
+    technologies: ["React.js", "Material-UI", "Framer Motion", "Recharts", "Leaflet", "FastAPI", "Uvicorn", "InfluxDB", "Python"],
+    domains: ["Web Development", "IoT", "Data Science"],
+    link: "https://github.com/ascender1729/urban-soundscape-harmonizer"
+  },
   {
     title: "CodeSage",
     description: "Advanced code review assistant designed to enhance the software development process. It provides automated insights, best practice suggestions, and helps maintain code quality across projects.",
@@ -41,9 +63,6 @@ const projects = [
   }
 ];
 
-const allDomains = ["Blockchain", "Data Science", "AI", "Software Development", "Web Development"];
-const allTechnologies = Array.from(new Set(projects.flatMap(project => project.technologies)));
-
 const Projects = () => {
   const [selectedDomains, setSelectedDomains] = useState([]);
   const [selectedTechnologies, setSelectedTechnologies] = useState([]);
@@ -56,13 +75,17 @@ const Projects = () => {
     setSelectedTechnologies(selectedOptions ? selectedOptions.map(option => option.value) : []);
   };
 
+  // Create unique domain and technology options for Select
+  const uniqueDomains = Array.from(new Set(projects.flatMap(project => project.domains)));
+  const uniqueTechnologies = Array.from(new Set(projects.flatMap(project => project.technologies)));
+
+  const domainOptions = uniqueDomains.map(domain => ({ value: domain, label: domain }));
+  const technologyOptions = uniqueTechnologies.map(tech => ({ value: tech, label: tech }));
+
   const filteredProjects = projects.filter(project => 
     (selectedDomains.length === 0 || selectedDomains.some(domain => project.domains.includes(domain))) &&
     (selectedTechnologies.length === 0 || selectedTechnologies.every(tech => project.technologies.includes(tech)))
   );
-
-  const domainOptions = allDomains.map(domain => ({ value: domain, label: domain }));
-  const technologyOptions = allTechnologies.map(tech => ({ value: tech, label: tech }));
 
   return (
     <section id="projects" className="py-20 bg-gray-100 dark:bg-gray-900">
@@ -118,6 +141,17 @@ const Projects = () => {
                 <FaGithub className="mr-2" />
                 View on GitHub
               </a>
+              {project.playLink && (
+                <a
+                  href={project.playLink}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center text-blue-600 dark:text-blue-400 hover:underline ml-4"
+                >
+                  <FaGamepad className="mr-2" />
+                  Play Game
+                </a>
+              )}
             </motion.div>
           ))}
         </div>
