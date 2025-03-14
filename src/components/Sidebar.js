@@ -3,7 +3,7 @@ import { motion } from 'framer-motion';
 import { FaTimes } from 'react-icons/fa';
 
 const Sidebar = ({ isOpen, setIsOpen, setCurrentSection, currentSection }) => {
-  const navItems = ['Home', 'About', 'Experience', 'Education', 'Research', 'Projects', 'Services', 'Contact'];
+  const navItems = ['Home', 'About', 'Experience', 'Education', 'Research', 'Projects', 'Certifications', 'Contact'];
 
   const sidebarVariants = {
     hidden: { x: '100%', opacity: 0 },

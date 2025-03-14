@@ -5,61 +5,61 @@ import { FaGithub, FaGamepad } from 'react-icons/fa';
 
 const projects = [
   {
-    title: "Cosmic Defender",
-    description: "Navigate through an asteroid field, destroy incoming threats, and collect power-ups to survive as long as possible in this exciting 3D space shooter game built with Three.js.",
-    technologies: ["HTML5", "CSS3", "JavaScript", "Three.js", "Howler.js"],
-    domains: ["Web Development", "Game Development"],
-    link: "https://github.com/ascender1729/asteroid-dodge",
-    playLink: "https://ascender1729.github.io/asteroid-dodge/"
+    title: "ML Approaches for Predicting Composition Property Relationship in Industrial Steels",
+    description: "This research enhances the current understanding of materials science, providing insights into steel properties with practical implications for optimizing steel manufacturing processes and improving material performance. The use of advanced models and robust error analysis strengthens the applicability and reliability of our findings.",
+    technologies: ["HTML5", "CSS3", "JavaScript", "Python","R"],
+    domains: ["Web Development", "Machine Learning"],
+    link: "https://github.com/saikirananugam/-Machine-Learning-Approaches-for-Predicting-Composition-Property-Relationship-in-Industrial-Steels",
+    // playLink: "https://ascender1729.github.io/asteroid-dodge/"
   },
   {
-    title: "QuantumWaste",
-    description: "Leverages quantum-inspired algorithms and machine learning to simulate and optimize the recycling process for complex polymers, combining quantum computing concepts with materials science.",
-    technologies: ["React.js", "Flask", "Three.js", "Material-UI", "PennyLane", "Scikit-learn", "NumPy", "Joblib"],
-    domains: ["Web Development", "Data Science", "Quantum Computing"],
-    link: "https://github.com/ascender1729/QuantumWaste"
+    title: "Advanced Facial Recognition and Bias Mitigation",
+    description: "This project leverages state-of-the-art deep learning models to predict age, gender, and race using a multi-task learning approach, integrating a user-friendly interface built with Python’s Gradio framework.",
+    technologies: [ "EfficientNetB0", "ResNet50","MobileNetV2", "Scikit-learn", "NumPy","Gradio"],
+    domains: ["Data Science", "Image Processing"],
+    link: "https://github.com/saikirananugam/DIP_Team-4"
   },
   {
-    title: "Urban Soundscape Harmonizer",
-    description: "Monitors and analyzes urban noise levels in real-time across major Indian cities, leveraging IoT simulations, machine learning, and data visualization techniques.",
-    technologies: ["React.js", "Material-UI", "Framer Motion", "Recharts", "Leaflet", "FastAPI", "Uvicorn", "InfluxDB", "Python"],
-    domains: ["Web Development", "IoT", "Data Science"],
-    link: "https://github.com/ascender1729/urban-soundscape-harmonizer"
+    title: "Oil Production Forecasting Using Machine Learning",
+    description: "Developed a robust time series forecasting model leveraging advanced machine learning algorithms to predict future values based on historical data, aimed at overcoming the limitations of traditional forecasting methods.",
+    technologies: [" Time series",,"Lasso Regression","Python","K-Nearest Neighbors (KNN)","Streamlit"],
+    domains: ["Machine Learning",  "Big data Analytics"],
+    link: ""
   },
   {
-    title: "CodeSage",
-    description: "Advanced code review assistant designed to enhance the software development process. It provides automated insights, best practice suggestions, and helps maintain code quality across projects.",
-    technologies: ["Python", "Flask", "AST", "McCabe complexity", "Git integration"],
-    domains: ["Software Development"],
-    link: "https://github.com/ascender1729/CodeSage"
+    title: "Fake news detection using NLP",
+    description: "Our approach utilizes image processing techniques to convert the image text into a readable format, enabling the detection of fake news from image inputs.",
+    technologies: ["Python", "LSTM", "BERT","Word2Vec","Multinomial Naive Bayes"],
+    domains: ["Natural Language Processing (NLP)"],
+    link: "https://www.linkedin.com/in/saikirananugam/details/projects/1635532615143/single-media-viewer?type=LINK&profileId=ACoAAC0IFlwBbQEZb7DQyckcEjPTQVYokV_27Rk&lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_projects_details%3Bx4RMWSu4Ti64HNSE4MPdgg%3D%3D"
   },
   {
-    title: "SentiPulse",
-    description: "An advanced sentiment analysis tool that leverages AI to assess the emotional tone of text inputs from social media. It offers real-time processing, intuitive UI, and robust backend integration with Hugging Face for accurate sentiment predictions.",
-    technologies: ["Node.js", "Express", "Svelte", "Hugging Face API", "SQLite"],
-    domains: ["AI", "Web Development"],
-    link: "https://github.com/ascender1729/sentipulse"
+    title: "Biodefense Simulation Using Machine Learning & Geospatial Analysis (NVIDIA RAPIDS Project)",
+    description: "Optimized crisis response strategies with K-means and DBSCAN clustering on an NVIDIA RAPIDS-accelerated dataset, achieving 5x faster execution for infection spread analysis",
+    technologies: ["CUDA","High Performance Computing (HPC)","K-Means", "DBSCAN"],
+    domains: ["AI", "Machine Learning"],
+    link: "https://www.linkedin.com/in/saikirananugam/details/projects/"
   },
   {
-    title: "ByBit Inverse BTCUSD Perpetual Calculator",
-    description: "A Ruby-based application that assists cryptocurrency traders in managing and calculating risks associated with ByBit's Inverse BTCUSD Perpetual contracts. It features various calculators and a user-friendly interface implemented with Tk.",
-    technologies: ["Ruby", "Tk", "Financial analysis"],
-    domains: ["Software Development"],
-    link: "https://github.com/ascender1729/BybitCalculator"
+    title: "Speech Emotion Recognition using Neural Networks and Deep Learning",
+    description: "Speech Emotion Recognition, abbreviated as SER, is the act of attempting to recognize human emotion and affective states from speech using Neural Networks and Deep Learning techniques.",
+    technologies: ["MLPC","CNN","LSTM"],
+    domains: ["Deep Learning"],
+    link: "https://github.com/saikirananugam/NNDL/tree/main/Capstone%20Project"
   },
   {
-    title: "AudioDictate",
-    description: "An efficient desktop application for transcribing audio files into text using Vosk speech recognition. It offers offline functionality for the transcription of WAV audio files, including the conversion of non-WAV formats into WAV.",
-    technologies: ["Python", "Tkinter", "Vosk", "PyDub"],
-    domains: ["AI", "Software Development"],
-    link: "https://github.com/ascender1729/AudioDictate"
+    title: "MultiPurpose Agriculture Apparatus",
+    description: "To provide multipurpose equipment for dryland farmers. Used for Soil disturbing, sowing, and applying manure using a brake mechanism. A patent is Published for this project.",
+    technologies: ["Python", "Image Processing","AutoCAD"],
+    domains: ["Design for Social Impact"],
+    link: "https://github.com/saikirananugam/Multi-purpose-agro-machine"
   },
   {
-    title: "SentiTweet",
-    description: "A powerful sentiment analysis tool that leverages AWS Comprehend and TextBlob to analyze the sentiment of text inputs. It provides both a command-line interface and a web application for flexible usage, making it easy to understand the emotional tone of text data.",
-    technologies: ["Python", "Flask", "AWS Comprehend", "TextBlob", "pandas", "matplotlib", "seaborn", "Chart.js"],
-    domains: ["AI", "Web Development"],
-    link: "https://github.com/ascender1729/sentitweet"
+    title: "Startup success prediction using Machine Learning",
+    description: "Predicting the Success of startups using Machine learning algorithms.",
+    technologies: ["Python", "Regression"],
+    domains: ["AI", "Machine Learning"],
+    link: "https://github.com/saikirananugam/AI/tree/main/capstone-proje"
   }
 ];
 
@@ -109,7 +109,7 @@ const Projects = () => {
           <Select
             options={technologyOptions}
             isMulti
-            placeholder="Select Technologies"
+            placeholder="Select Approach"
             onChange={handleTechnologyChange}
             className="w-full md:w-1/3"
           />

@@ -111,16 +111,16 @@ const Contact = () => {
         <div className="mt-12 text-center">
           <h3 className="text-2xl font-semibold mb-6 text-gray-800 dark:text-gray-200">Connect with me</h3>
           <div className="flex justify-center space-x-4">
-            <a href="https://linkedin.com/in/im-pavankumar" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-600 p-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
+            <a href="https://www.linkedin.com/in/saikirananugam/" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-600 p-3 rounded-full hover:bg-blue-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaLinkedin size={32} />
             </a>
-            <a href="https://github.com/ascender1729" target="_blank" rel="noopener noreferrer" className="text-white bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
+            <a href="https://github.com/saikirananugam" target="_blank" rel="noopener noreferrer" className="text-white bg-gray-800 p-3 rounded-full hover:bg-gray-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaGithub size={32} />
             </a>
-            <a href="https://twitter.com/the_complex_one" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-400 p-3 rounded-full hover:bg-blue-500 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
+            <a href="https://x.com/Sai_ask23" target="_blank" rel="noopener noreferrer" className="text-white bg-blue-400 p-3 rounded-full hover:bg-blue-500 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaTwitter size={32} />
             </a>
-            <a href="mailto:pavankumar.dubasi2019@gmail.com" className="text-white bg-red-600 p-3 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
+            <a href="mailto:saikirananugam@gmail.com" className="text-white bg-red-600 p-3 rounded-full hover:bg-red-700 transition duration-300 transform hover:scale-105 shadow-glow hover:shadow-glow-lg">
               <FaEnvelope size={32} />
             </a>
           </div>

@@ -4,7 +4,7 @@
 npm run build
 
 # Create CNAME file
-echo "dubasipavankumar.com" > build/CNAME
+echo "saikirananugam.com" > build/CNAME
 
 # Deploy to gh-pages branch
 npm run deploy

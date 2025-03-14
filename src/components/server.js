@@ -68,7 +68,7 @@ app.post('/api/contact', async (req, res) => {
   `;
 
   try {
-    await sendEmail('pavankumar.dubasi2019@gmail.com', `New contact from ${name}`, emailContent);
+    await sendEmail('saikirananugam@gmail.com', `New contact from ${name}`, emailContent);
     res.status(200).send('Email sent successfully');
   } catch (error) {
     console.error('Error in /api/contact:', error);

@@ -1,67 +1,201 @@
 import React, { useRef, useEffect } from 'react';
 import { motion, useAnimation } from 'framer-motion';
-import { FaArrowRight, FaCode, FaDatabase, FaRobot, FaChartLine, FaGraduationCap, FaPaperPlane, FaGlobe, FaChartArea, FaPython, FaReact, FaNodeJs, FaAws, FaDocker, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinux, FaRProject } from 'react-icons/fa';
-import { SiTensorflow, SiScikitlearn, SiPandas, SiNumpy, SiMongodb, SiTypescript, SiFlask, SiCplusplus, SiGo, SiRubyonrails, SiTailwindcss, SiWebpack, SiKeras, SiOpencv, SiPytorch, SiGraphql, SiTableau, SiSolidity, SiEthereum, SiMysql } from 'react-icons/si';
+// import { FaArrowRight, FaCode, FaDatabase, FaRobot, FaChartLine, FaGraduationCap, FaPaperPlane, FaGlobe, FaChartArea, FaPython, FaReact, FaNodeJs, FaAws, FaDocker, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinux, FaRProject } from 'react-icons/fa';
+// import { FaArrowRight, FaCode, FaDatabase, FaRobot,FaPaperPlane, FaGlobe, FaChartArea, FaPython, FaReact, FaNodeJs, FaAws, FaDocker, FaHtml5, FaCss3Alt, FaJs, FaGithub, FaLinux, FaRProject } from 'react-icons/fa';
+
+// import { SiTensorflow, SiScikitlearn, SiPandas, SiNumpy, SiMongodb, SiTypescript, SiFlask, SiCplusplus, SiGo, SiRubyonrails, SiTailwindcss, SiWebpack, SiKeras, SiOpencv, SiPytorch, SiGraphql, SiTableau, SiSolidity, SiEthereum, SiMysql } from 'react-icons/si';
+
+// import { 
+//   FaGraduationCap, FaAward, FaChartLine, FaBookOpen, FaMedal } from 'react-icons/fa';
+
+// import { SiOracle, SiNvidia, SiIeee } from 'react-icons/si'; // Added IEEE Logo
+
+// import { VscAzure } from "react-icons/vsc";  // Microsoft Azure Certification
+
+// import { 
+//   FaArrowRight, FaPaperPlane,
+//   FaPython, FaReact, FaNodeJs, FaAws, FaDocker, FaHtml5, FaCss3Alt, FaJs, FaGithub, 
+//   FaLinux, FaRProject, FaGraduationCap, FaAward, FaChartLine, FaBookOpen, FaMedal, 
+//   FaLinkedin
+// } from 'react-icons/fa'; // Removed FaComputer from here
+
+// import { 
+//   SiTensorflow, SiScikitlearn, SiPandas, SiNumpy, SiMongodb, SiTypescript, SiFlask, 
+//   SiCplusplus, SiGo, SiRubyonrails, SiTailwindcss, SiWebpack, SiKeras, SiOpencv, SiPytorch, 
+//   SiGraphql, SiTableau, SiSolidity, SiEthereum, SiMysql, SiOracle, SiNvidia, SiIeee, 
+//   SiNasa, SiKaggle
+// } from 'react-icons/si'; // NASA & Kaggle Logos
+
+// import { VscAzure } from "react-icons/vsc"; // Microsoft Azure Certification
+
+// import { GiTargetPoster} from "react-icons/gi"; // Poster & Research
+// import { FcConferenceCall } from "react-icons/fc"; // Conference
+
+// import { FaComputer } from "react-icons/fa6"; //
+
+
+import { 
+  FaArrowRight, FaPaperPlane, FaPython, FaReact, FaNodeJs, FaAws, FaHtml5, FaCss3Alt, 
+  FaJs, FaGithub, FaLinux, FaGraduationCap, FaAward, FaChartLine, FaBookOpen, 
+  FaMedal, FaLinkedin
+} from 'react-icons/fa';
+
+import { 
+  SiTensorflow, SiScikitlearn, SiPandas, SiNumpy, SiFlask, SiCplusplus, 
+  SiTailwindcss, SiKeras, SiOpencv, SiPytorch, SiTableau, SiMysql, SiOracle, SiNvidia, 
+  SiIeee, SiNasa, SiKaggle, SiJupyter, SiAnaconda, SiScipy, SiPlotly, 
+  SiFortran , SiRstudio
+} from 'react-icons/si'; // ✅ Appended missing icons (No duplicates)
+
+import { VscAzure } from "react-icons/vsc"; // ✅ Microsoft Azure Certification
+import { PiMicrosoftExcelLogo } from "react-icons/pi"; // ✅ Microsoft Excel
+
+import { GiTargetPoster } from "react-icons/gi"; // ✅ Poster & Research
+import { FcConferenceCall } from "react-icons/fc"; // ✅ Conference
+
+import { FaComputer } from "react-icons/fa6"; // ✅ Data Science Intern
+
+
+
+
+
+// const LatestUpdates = [
+//   { title: "ML Fraud Detection", icon: <FaRobot /> },
+//   { title: "Data Science Project", icon: <FaChartLine /> },
+//   { title: "MSc Mathematics", icon: <FaGraduationCap /> },
+//   { title: "Full-Stack Web App", icon: <FaCode /> },
+//   { title: "Advanced Database", icon: <FaDatabase /> },
+//   { title: "Sentiment Analysis", icon: <FaGlobe /> },
+//   { title: "Code Review Enhancer", icon: <FaCode /> },
+//   { title: "Real-Time Analysis", icon: <FaChartArea /> },
+//   { title: "Crypto Risk Management", icon: <FaDatabase /> },
+//   { title: "Speech-to-Text", icon: <FaRobot /> },
+//   { title: "GAN Style Transfer", icon: <FaPaperPlane /> },
+//   { title: "Facial Feature Analysis", icon: <FaPaperPlane /> }
+// ];
 
 const LatestUpdates = [
-  { title: "ML Fraud Detection", icon: <FaRobot /> },
-  { title: "Data Science Project", icon: <FaChartLine /> },
-  { title: "MSc Mathematics", icon: <FaGraduationCap /> },
-  { title: "Full-Stack Web App", icon: <FaCode /> },
-  { title: "Advanced Database", icon: <FaDatabase /> },
-  { title: "Sentiment Analysis", icon: <FaGlobe /> },
-  { title: "Code Review Enhancer", icon: <FaCode /> },
-  { title: "Real-Time Analysis", icon: <FaChartArea /> },
-  { title: "Crypto Risk Management", icon: <FaDatabase /> },
-  { title: "Speech-to-Text", icon: <FaRobot /> },
-  { title: "GAN Style Transfer", icon: <FaPaperPlane /> },
-  { title: "Facial Feature Analysis", icon: <FaPaperPlane /> }
+  { title: "Kaggle Top 9 - Energy AI", icon: <SiKaggle /> }, // Kaggle Competition
+  { title: "Researcher on NASA-funded project", icon: <SiNasa /> }, // NASA Research
+  { title: "Patent Holder", icon: <FaPaperPlane /> }, // Patent,
+  { title: "Data Science for Energy Intern", icon: <FaComputer /> }, // Internship
+  { title: "COOGS Energy Transition Hackathon", icon: <FaChartLine /> }, // Hackathon Selection
+  { title: "LinkedIn Top Data Science Voice", icon: <FaLinkedin /> }, // LinkedIn Recognition
+  { title: "Presented Poster - OCHEGS", icon: <GiTargetPoster /> }, // Poster Presentation
+  { title: "Research Paper - ICAPSM (Intl. Conference on Advances in Physical Sciences & Materials)", icon: <FcConferenceCall /> } // Conference Paper
+  // { title: "Ongoing Research Project", icon: <GiArchiveResearch /> }, // Research Work
+  
 ];
+
+
+// const Skills = [
+//   { icon: <FaPython size={28} /> },
+//   { icon: <SiCplusplus size={28} /> },
+//   { icon: <FaJs size={28} /> },
+//   { icon: <FaReact size={28} /> },
+//   { icon: <FaNodeJs size={28} /> },
+//   { icon: <FaHtml5 size={28} /> },
+//   { icon: <FaCss3Alt size={28} /> },
+//   { icon: <SiTailwindcss size={28} /> },
+//   { icon: <SiMongodb size={28} /> },
+//   { icon: <SiFlask size={28} /> },
+//   { icon: <SiTypescript size={28} /> },
+//   { icon: <SiWebpack size={28} /> },
+//   { icon: <SiTensorflow size={28} /> },
+//   { icon: <SiScikitlearn size={28} /> },
+//   { icon: <SiPandas size={28} /> },
+//   { icon: <SiNumpy size={28} /> },
+//   { icon: <SiKeras size={28} /> },
+//   { icon: <SiOpencv size={28} /> },
+//   { icon: <SiPytorch size={28} /> },
+//   { icon: <FaGithub size={28} /> },
+//   { icon: <FaDocker size={28} /> },
+//   { icon: <FaAws size={28} /> },
+//   { icon: <SiGo size={28} /> },
+//   { icon: <SiGraphql size={28} /> },
+//   { icon: <SiRubyonrails size={28} /> },
+//   { icon: <FaLinux size={28} /> },
+//   { icon: <SiMysql size={28} /> },
+//   { icon: <SiTableau size={28} /> },
+//   { icon: <SiSolidity size={28} /> },
+//   { icon: <SiEthereum size={28} /> },
+//   { icon: <FaRProject size={28} /> }
+// ];
+
 
 const Skills = [
-  { icon: <FaPython size={28} /> },
-  { icon: <SiCplusplus size={28} /> },
-  { icon: <FaJs size={28} /> },
-  { icon: <FaReact size={28} /> },
-  { icon: <FaNodeJs size={28} /> },
-  { icon: <FaHtml5 size={28} /> },
-  { icon: <FaCss3Alt size={28} /> },
-  { icon: <SiTailwindcss size={28} /> },
-  { icon: <SiMongodb size={28} /> },
-  { icon: <SiFlask size={28} /> },
-  { icon: <SiTypescript size={28} /> },
-  { icon: <SiWebpack size={28} /> },
-  { icon: <SiTensorflow size={28} /> },
-  { icon: <SiScikitlearn size={28} /> },
-  { icon: <SiPandas size={28} /> },
-  { icon: <SiNumpy size={28} /> },
-  { icon: <SiKeras size={28} /> },
-  { icon: <SiOpencv size={28} /> },
-  { icon: <SiPytorch size={28} /> },
-  { icon: <FaGithub size={28} /> },
-  { icon: <FaDocker size={28} /> },
-  { icon: <FaAws size={28} /> },
-  { icon: <SiGo size={28} /> },
-  { icon: <SiGraphql size={28} /> },
-  { icon: <SiRubyonrails size={28} /> },
-  { icon: <FaLinux size={28} /> },
-  { icon: <SiMysql size={28} /> },
-  { icon: <SiTableau size={28} /> },
-  { icon: <SiSolidity size={28} /> },
-  { icon: <SiEthereum size={28} /> },
-  { icon: <FaRProject size={28} /> }
+  // ✅ Programming Languages
+  { icon: <FaPython size={28} /> }, 
+  { icon: <SiCplusplus size={28} /> }, 
+  { icon: <FaJs size={28} /> }, 
+  { icon: <SiFortran size={28} /> }, // Fortran for HPC  
+  { icon: <SiRstudio size={28} /> }, // R for Data Science  
+
+  // ✅ Web & Backend (Minimal, Just Relevant Ones)
+  { icon: <FaReact size={28} /> }, 
+  { icon: <FaNodeJs size={28} /> }, 
+  { icon: <FaHtml5 size={28} /> }, 
+  { icon: <FaGithub size={28} /> }, 
+  { icon: <FaCss3Alt size={28} /> }, 
+  { icon: <SiTailwindcss size={28} /> }, 
+  { icon: <SiFlask size={28} /> }, 
+  { icon: <SiMysql size={28} /> },  
+
+  // ✅ AI/ML & Data Science
+  { icon: <SiTensorflow size={28} /> }, 
+  { icon: <SiScikitlearn size={28} /> }, 
+  { icon: <SiPandas size={28} /> }, 
+  { icon: <SiNumpy size={28} /> }, 
+  { icon: <SiKeras size={28} /> }, 
+  { icon: <SiOpencv size={28} /> }, 
+  { icon: <SiPytorch size={28} /> }, 
+  { icon: <SiScipy size={28} /> }, // Scientific Computing  
+  // { icon: <SiMatlab size={28} /> }, // MATLAB for Numerical Analysis  
+  { icon: <SiJupyter size={28} /> }, // ✅ Jupyter Notebook  
+  { icon: <SiAnaconda size={28} /> }, // ✅ Anaconda  
+
+  // ✅ Data Visualization
+  { icon: <SiTableau size={28} /> }, 
+  { icon: <SiPlotly size={28} /> }, 
+  // { icon: <SiSeaborn size={28} /> },  
+  { icon: <PiMicrosoftExcelLogo size={28} /> }, // ✅ Microsoft Excel  
+
+  // ✅ HPC & Research Computing
+  { icon: <FaLinux size={28} /> }, 
+  { icon: <FaAws size={28} /> }, 
+  { icon: <SiNvidia size={28} /> }, // CUDA & GPU Computing  
+  // { icon: <SiSlurm size={28} /> } // SLURM for HPC Job Scheduling
 ];
 
+
+
+
+
+// const Achievements = [
+//   { title: "GeeksforGeeks AIR 45", icon: <FaGraduationCap /> },
+//   { title: "CodeKaze AIR 105", icon: <FaCode /> },
+//   { title: "Codeforces Expert", icon: <FaChartLine /> },
+//   { title: "LeetCode Knight", icon: <FaChartArea /> },
+//   { title: "Highest CGPA", icon: <FaGraduationCap /> },
+//   { title: "AWS Certification", icon: <FaAws /> },
+//   { title: "Blockchain Specialist", icon: <FaDatabase /> },
+//   { title: "Six Sigma Green Belt", icon: <FaChartLine /> }
+// ];
+
 const Achievements = [
-  { title: "GeeksforGeeks AIR 45", icon: <FaGraduationCap /> },
-  { title: "CodeKaze AIR 105", icon: <FaCode /> },
-  { title: "Codeforces Expert", icon: <FaChartLine /> },
-  { title: "LeetCode Knight", icon: <FaChartArea /> },
-  { title: "Highest CGPA", icon: <FaGraduationCap /> },
-  { title: "AWS Certification", icon: <FaAws /> },
-  { title: "Blockchain Specialist", icon: <FaDatabase /> },
-  { title: "Six Sigma Green Belt", icon: <FaChartLine /> }
+  { title: "4.0/4.0 CGPA - UH", icon: <FaGraduationCap /> },  // Academic Excellence
+  { title: "Recipient of 70% UH Scholarship", icon: <FaAward /> },  // Scholarship
+  // { title: "UH AI Challenge Winner", icon: <FaTrophy /> },  // AI Competition
+  { title: "Certificate of Excellence in AI", icon: <FaMedal /> },  // AI Competition
+  { title: "Published 2 Scopus indexed Papers", icon: <FaBookOpen /> },  // Research & Publications
+  { title: "OCI Generative AI Certified", icon: <SiOracle /> },  // Oracle AI Certification
+  { title: "Microsoft Azure AI Certified", icon: <VscAzure /> },  // Azure AI Certification
+  { title: "NVIDIA RAPIDS Certification", icon: <SiNvidia /> },  // GPU & ML Acceleration
+  { title: "IEEE Student Branch Secretary", icon: <SiIeee /> }  // IEEE Leadership Role
 ];
+
+
+
 
 const Home = ({ setCurrentSection }) => {
   const controls = useAnimation();
@@ -162,7 +296,7 @@ const Home = ({ setCurrentSection }) => {
           animate={controls}
           transition={{ duration: 0.8, delay: 0.4 }}
         >
-          Dubasi Pavan Kumar
+          Anugam Saikiran
         </motion.h2>
         
         <motion.p 
@@ -199,7 +333,7 @@ const Home = ({ setCurrentSection }) => {
           </button>
           
           <button
-            onClick={() => setCurrentSection('services')}
+            onClick={() => setCurrentSection('certifications')}
             className="text-blue-600 dark:text-blue-400 flex items-center group text-xl"
           >
             Hire Me 
