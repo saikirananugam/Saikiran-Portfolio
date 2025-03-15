@@ -44,8 +44,8 @@ import {
   SiTensorflow, SiScikitlearn, SiPandas, SiNumpy, SiFlask, SiCplusplus, 
   SiTailwindcss, SiKeras, SiOpencv, SiPytorch, SiTableau, SiMysql, SiOracle, SiNvidia, 
   SiIeee, SiNasa, SiKaggle, SiJupyter, SiAnaconda, SiScipy, SiPlotly, 
-  SiFortran , SiRstudio
-} from 'react-icons/si'; // ✅ Appended missing icons (No duplicates)
+  SiFortran, SiR
+} from 'react-icons/si';
 
 import { VscAzure } from "react-icons/vsc"; // ✅ Microsoft Azure Certification
 import { PiMicrosoftExcelLogo } from "react-icons/pi"; // ✅ Microsoft Excel
@@ -129,7 +129,7 @@ const Skills = [
   { icon: <SiCplusplus size={28} /> }, 
   { icon: <FaJs size={28} /> }, 
   { icon: <SiFortran size={28} /> }, // Fortran for HPC  
-  { icon: <SiRstudio size={28} /> }, // R for Data Science  
+  { icon: <SiR size={28} /> }, // R for Data Science  
 
   // ✅ Web & Backend (Minimal, Just Relevant Ones)
   { icon: <FaReact size={28} /> }, 

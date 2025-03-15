@@ -1,6 +1,6 @@
 {
   "name": "saikiran-anugam-portfolio",
-  "homepage": "https://saikirananugam.github.io/Saikiran-Portfolio",
+  "homepage": "https://saikirananugam.com/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -32,8 +32,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "predeploy": "npm run build",  
-    "deploy": "gh-pages -d build"  
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
