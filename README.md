@@ -1,6 +1,6 @@
-# Dubasi Pavan Kumar - Portfolio
+# Anugam Saikiran - Portfolio
 
-This is the personal portfolio website of Dubasi Pavan Kumar, showcasing skills, projects, and achievements.
+This is the personal portfolio website of Anugam Saikiran, showcasing skills, projects, and achievements across various pages.
 
 ## Technologies Used
 
@@ -30,4 +30,4 @@ To learn more about the technologies used in this project, check out the followi
 
 ## Contact
 
-For any inquiries, please reach out to Dubasi Pavan Kumar at [pavankumard.pg19.ma@nitp.ac.in].
+For any inquiries, please reach out to Anugam Saikiran at [pavankumard.pg19.ma@nitp.ac.in].
