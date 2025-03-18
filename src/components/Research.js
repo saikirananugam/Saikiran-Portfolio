@@ -343,20 +343,52 @@ import 'swiper/css/pagination';
 import { Navigation, Pagination, Autoplay } from 'swiper/modules';
 
 
-import Image1 from '../images/poster_ochegs.jpeg'; // Adjust the path
-import Image2 from '../images/AI_challenge.png'; // Adjust the path
-import Image3 from '../images/WhatsApp Image 2025-02-08 at 01.20.33.jpeg'; // Adjust the path
-import Image4 from '../images/Thesis_team.jpeg'; // Adjust the path
-import Image5 from '../images/prototype_dsi.jpeg'; // Adjust the path
-import Image6 from '../images/user_testing.jpeg'; // Adjust the path
-import Image7 from '../images/HPE_website.jpeg'; // Adjust the path
-import Image8 from '../images/IEEE_team.jpeg'; // Adjust the path
-import Image9 from '../images/DSI_flexi.jpeg'; // Adjust the path
-import Image10 from '../images/THS.jpeg'; // Adjust the path
-import Image11 from '../images/poster.jpeg'; // Adjust the path
+import Image1 from '../images/photo-output8.jpeg'; // Adjust the path
+import Image2 from '../images/team-coorg.jpg'; // Adjust the path
+import Image3 from '../images/photo-output5.jpeg'; // Adjust the path
+import Image4 from '../images/photo-output6.jpeg'; // Adjust the path
+import Image5 from '../images/DSI_flexi.jpeg'; // Adjust the path
+import Image6 from '../images/photo-output4.jpeg'; // Adjust the path
+import Image7 from '../images/photo-output3.jpeg'; // Adjust the path
+import Image8 from '../images/photo-output2.jpeg'; // Adjust the path
+import Image9 from '../images/user_testing.jpeg'; // Adjust the path
+import Image10 from '../images/photo-output7.jpeg'; // Adjust the path
+import Image11 from '../images/HPE_website.jpeg'; // Adjust the path
+import Image12 from '../images/class2.jpeg'; // Adjust the path
+import Image13 from '../images/photo-output.jpeg'; // Adjust the path
 
 
-const images = [Image1, Image2, Image3, Image4,Image5,Image6,Image7,Image8,Image9,Image10,Image11];
+
+
+// import Image2 from '../images/AI_challenge.png'; // Adjust the path
+// import Image3 from '../images/WhatsApp Image 2025-02-08 at 01.20.33.jpeg'; // Adjust the path
+// import Image4 from '../images/Thesis_team.jpeg'; // Adjust the path
+// import Image5 from '../images/prototype_dsi.jpeg'; // Adjust the path
+// import Image6 from '../images/user_testing.jpeg'; // Adjust the path
+// import Image7 from '../images/HPE_website.jpeg'; // Adjust the path
+// import Image8 from '../images/IEEE_team.jpeg'; // Adjust the path
+// import Image9 from '../images/DSI_flexi.jpeg'; // Adjust the path
+// import Image10 from '../images/Group_picture.jpeg'; // Adjust the path
+// import Image11 from '../images/.jpeg'; // Adjust the path
+// import Image12 from '../images/Ochegs_Group_photo.jpeg'; // Adjust the path
+// import Image13 from '../images/Team_Watt_A_Coog.jpeg'; // Adjust the path
+// import Image14 from '../images/Vekilov_party2.jpeg'; // Adjust the path
+// import Image15 from '../images/Dr.Powell2.jpeg'; // Adjust the path
+
+
+
+
+import { PiPresentation } from 'react-icons/pi';
+
+
+
+//AI challenge PiPresentatio, 
+
+
+
+
+
+const images = [Image1, Image2, Image3, Image4,Image5,Image6,Image7,Image8,Image9,Image10,Image11,Image12,Image13];
 const Research = () => {
   const thesis = {
     title: "Solution Convection and Mesoscopic Protein Aggregation: Space Results",

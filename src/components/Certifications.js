@@ -418,10 +418,10 @@ import Image3 from "../images/OCI_Gen_AI.jpeg";
 import Image2 from "../images/azure.png";
 import Image1 from "../images/ai_excellence.jpeg";
 import Image5 from "../images/nvidia_accelerated.jpeg";
-import Image6 from "../images/aws_forage.jpeg";
+import Image6 from "../images/aws_genai.jpg";
 import Image7 from "../images/IEEE_membership.png";
 import Image8 from "../images/ICAPSM_speech.jpeg";
-import Image9 from "../images/accenture_forage.png";
+import Image9 from "../images/coogs_certificate1.jpg";
 import Image10 from "../images/top_ds_voice.jpeg";
 // import Image11 from "../images/oracle_java.png";
 // import Image12 from "../images/Let_us_C.jpeg";
@@ -472,9 +472,9 @@ const Certifications = [
     link: "https://drive.google.com/file/d/1bm3QxljwZTay5P3MjZA4fWM2EXd5o1VN/view?usp=sharing"
   },
   {
-    title: "AWS Solutions Architect Virtual Experience Program",
+    title: "AWS Introduction to Generative AI",
     icon: <FaAws  className="text-4xl mb-4" />,
-    description: "Accomplished AWS Solutions Architect Experience, gaining expertise in scalable and secure cloud design.",
+    description: "Accomplished AWS Introduction to Generative AI Experience, gaining expertise in Agentic AI.",
     image: Image6,
     link: "https://drive.google.com/file/d/1fHzBTKNgmRVyCPuEeFaxa0CzJXLq3M9C/view?usp=sharing"
   },
@@ -493,9 +493,9 @@ const Certifications = [
     link: "https://drive.google.com/file/d/1_LnaoKpS1-UdE4xSn0ZnZaXFuW9OjB8a/view?usp=sharing"
   },
   {
-    title: "Accenture Developer Virtual Experience Program",
+    title: "Certification of Appreciation",
     icon: <SiAccenture className="text-4xl mb-4" />,
-    description: "Completed Accenture Developer Virtual Experience, applying skills in cloud migration, debugging, SDLC security, and unit testing.",
+    description: "Secured Certification of Appreciation and Gift Coupon at Coogs for Energy Transition Event.",
     image: Image9,
     link: "https://drive.google.com/file/d/1KzWd-ZYCb-BSuTRzde-qvKkJKjE62H_M/view?usp=sharing"
   },
