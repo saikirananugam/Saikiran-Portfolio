@@ -397,7 +397,7 @@ const Research = () => {
     institution: "University of Houston",
     period: "2024 - Present",
     // codeLink: "https://github.com/saikirananugam",
-    // pdfLink: "https://example.com/thesis.pdf"
+    pdfLink: "https://uh-ir.tdl.org/items/35956565-3c23-43fa-b4a7-2929a3a84f53"
   };
 
   const publications = [
