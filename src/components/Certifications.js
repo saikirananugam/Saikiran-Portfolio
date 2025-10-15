@@ -154,7 +154,7 @@ const CertificationsComponent = () => {
     <section className="py-20 bg-gray-100 dark:bg-gray-900">
       <div className="container mx-auto px-4">
         <motion.h2 
-          className="text-4xl font-bold mb-12 text-center text-white-600 dark:text-white-400"
+          className="text-4xl font-bold mb-12 text-center text-blue-600 dark:text-blue-400"
           initial={{ opacity: 0, y: -50 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
@@ -162,55 +162,47 @@ const CertificationsComponent = () => {
           Certifications & Achievements
         </motion.h2>
 
-        {/* Swiper Component for Certifications with Autoplay */}
-        <Swiper 
-          effect="cards" 
-          grabCursor={true} 
-          modules={[EffectCards, Autoplay]} // ✅ Included Autoplay module
-          autoplay={{ 
-            delay: 2500, // ✅ Moves to the next slide every 2.5 seconds
-            disableOnInteraction: false // ✅ Keeps autoplay running even after user interaction
-          }} 
-          loop={true} // ✅ Ensures continuous sliding
-          className="mySwiper w-full max-w-lg"
-        >
-          {Certifications.map((certification, index) => (  
-            <SwiperSlide key={index} className="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 p-6">
-              {/* <a href={certification.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={certification.image}
-                  alt={certification.title}
-                  className="w-full h-72 object-cover rounded-lg mb-4 hover:opacity-80 transition-opacity"
-                />
-                <div className="text-center">
-                  <div className="text-blue-600 dark:text-blue-400 flex justify-center">{certification.icon}</div>
-                  <h3 className="text-xl font-bold mt-2">{certification.title}</h3>
-                  <p className="text-gray-600 dark:text-gray-400 mt-2">{certification.description}</p>
-                </div>
-              </a> */}
-              <div className="relative group">
-              <a href={certification.link} target="_blank" rel="noopener noreferrer">
-                <img
-                  src={certification.image}
-                  alt={certification.title}
-                  className="w-full h-96 object-contain rounded-lg mb-4 transition-opacity duration-300 group-hover:opacity-80"
-                />
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
-                  <span className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg text-lg font-semibold">
-                    View Certificate
-                  </span>
-                </div>
-              </a>
-              <div className="text-center">
-                <div className="text-blue-600 dark:text-blue-400 flex justify-center">{certification.icon}</div>
-                <h3 className="text-xl font-bold mt-2">{certification.title}</h3>
-                <p className="text-gray-600 dark:text-gray-400 mt-2">{certification.description}</p>
-              </div>
-            </div>
-
-            </SwiperSlide>
-          ))}
-        </Swiper>
+  <Swiper 
+  effect="cards" 
+  grabCursor={true} 
+  modules={[EffectCards, Autoplay]} 
+  autoplay={{ 
+    delay: 2500, 
+    disableOnInteraction: false 
+  }} 
+  loop={true}
+  className="mySwiper w-full max-w-lg"
+  onSwiper={(swiper) => (window.certSwiper = swiper)}
+>
+  {Certifications.map((certification, index) => (  
+    <SwiperSlide
+      key={index}
+      className="rounded-lg overflow-hidden shadow-lg bg-white dark:bg-gray-800 p-6"
+onMouseEnter={() => window.certSwiper?.autoplay?.stop && window.certSwiper.autoplay.stop()}
+onMouseLeave={() => window.certSwiper?.autoplay?.start && window.certSwiper.autoplay.start()}
+    >
+      <div className="relative group">
+        <a href={certification.link} target="_blank" rel="noopener noreferrer">
+          <img
+            src={certification.image}
+            alt={certification.title}
+            className="w-full h-96 object-contain rounded-lg mb-4 transition-opacity duration-300 group-hover:opacity-80"
+          />
+          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity">
+            <span className="bg-blue-600 text-white px-4 py-2 rounded-full shadow-lg text-lg font-semibold">
+              View Certificate
+            </span>
+          </div>
+        </a>
+        <div className="text-center">
+          <div className="text-blue-600 dark:text-blue-400 flex justify-center">{certification.icon}</div>
+          <h3 className="text-xl font-bold mt-2 text-white">{certification.title}</h3>
+          <p className="text-gray-600 dark:text-gray-400 mt-2">{certification.description}</p>
+        </div>
+      </div>
+    </SwiperSlide>
+  ))}
+</Swiper>
 
         {/* Contact Button */}
         <motion.div
