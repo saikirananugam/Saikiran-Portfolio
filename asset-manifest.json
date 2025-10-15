@@ -1,11 +1,13 @@
 {
   "files": {
-    "main.css": "/static/css/main.13d0da02.css",
-    "main.js": "/static/js/main.bf18429a.js",
+    "main.css": "/static/css/main.8a92391d.css",
+    "main.js": "/static/js/main.e7def508.js",
     "static/media/photo-output5.jpeg": "/static/media/photo-output5.eb5dcad33c535f3437db.jpeg",
     "static/media/photo-output3.jpeg": "/static/media/photo-output3.2068c45a53312a5d90e7.jpeg",
+    "static/media/banner2.png": "/static/media/banner2.7539d5696e58af647cea.png",
     "static/media/photo-output8.jpeg": "/static/media/photo-output8.59c2d548469e6a018378.jpeg",
     "static/media/profile-pic.png": "/static/media/profile-pic.d6767d4298f409207aeb.png",
+    "static/media/banner1.png": "/static/media/banner1.a7c43de5470ab2f605a1.png",
     "static/media/photo-output.jpeg": "/static/media/photo-output.aacefc3b79f6ee8edc97.jpeg",
     "static/media/photo-output2.jpeg": "/static/media/photo-output2.e6db129bee502e3dd5ad.jpeg",
     "static/media/IEEE_membership.png": "/static/media/IEEE_membership.40f7300e89bb5a06522d.png",
@@ -13,10 +15,12 @@
     "static/media/photo-output4.jpeg": "/static/media/photo-output4.23393fe8ea88fc19bc33.jpeg",
     "static/media/photo-output6.jpeg": "/static/media/photo-output6.bca7b7bad8199cc3dec1.jpeg",
     "static/media/ai_excellence.jpeg": "/static/media/ai_excellence.dfa0213085e0d0a1da09.jpeg",
+    "static/media/banner3.png": "/static/media/banner3.8b61ac322b4548d67c59.png",
     "static/media/team-coorg.jpg": "/static/media/team-coorg.a5d2c60bd5d38bc352ff.jpg",
     "static/media/azure.png": "/static/media/azure.16ebea5672ea418e429c.png",
     "static/media/Secernate-Games-icon.png": "/static/media/Secernate-Games-icon.44e09635c706137dc95b.png",
     "static/media/HPE_website.jpeg": "/static/media/HPE_website.e90470de936d24f67c10.jpeg",
+    "static/media/UH-Parameters-Feature.jpeg": "/static/media/UH-Parameters-Feature.fe0b702150dfa40b5130.jpeg",
     "static/media/Dr.Sandeep_lor.png": "/static/media/Dr.Sandeep_lor.317187d53d8f0c488130.png",
     "static/media/Lloyd_recomendatition.png": "/static/media/Lloyd_recomendatition.cb8ce02c03ac808691c7.png",
     "static/media/data_science_energy_logo.jpg": "/static/media/data_science_energy_logo.9127f7ddde18a4c62f36.jpg",
@@ -36,11 +40,11 @@
     "static/media/aws_genai.jpg": "/static/media/aws_genai.6648fffcec44333fdeee.jpg",
     "static/media/uh_red.png": "/static/media/uh_red.4adf4cacf6ffeee13c2c.png",
     "index.html": "/index.html",
-    "main.13d0da02.css.map": "/static/css/main.13d0da02.css.map",
-    "main.bf18429a.js.map": "/static/js/main.bf18429a.js.map"
+    "main.8a92391d.css.map": "/static/css/main.8a92391d.css.map",
+    "main.e7def508.js.map": "/static/js/main.e7def508.js.map"
   },
   "entrypoints": [
-    "static/css/main.13d0da02.css",
-    "static/js/main.bf18429a.js"
+    "static/css/main.8a92391d.css",
+    "static/js/main.e7def508.js"
   ]
 }
