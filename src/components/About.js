@@ -2,12 +2,15 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FaDownload, FaArrowRight } from 'react-icons/fa';
 import profileImage from '../images/profile-pic.png';
+import BannerCarousel from './BannerCarousel';
+
 
 const About = ({ setCurrentSection }) => {
   const resumeLink = "https://drive.google.com/file/d/1Dti6sI3i0CkwYCpga0KerYp8mi-Y0o2n/view?usp=sharing"; 
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-blue-50 to-white">
       <div className="container mx-auto px-4">
+        <BannerCarousel />
       <div className="flex items-center justify-center h-full">
   <motion.p 
     className="text-xl font-semibold text-black-900 dark:text-black-100 text-center mb-6 mt-4 italic"

@@ -391,12 +391,12 @@ import { PiPresentation } from 'react-icons/pi';
 const images = [Image1, Image2, Image3, Image4,Image5,Image6,Image7,Image8,Image9,Image10,Image11,Image12,Image13];
 const Research = () => {
   const thesis = {
-    title: "Solution Convection and Mesoscopic Protein Aggregation: Space Results",
+    title: "Research Data Scientist for NASA Funded ISS Project",
     supervisor: "Dr.Vekilov",
-    department: "Chemical & Biomolecular Engineering",
+    project: "Solution Convection and Mesoscopic Protein Aggregation: Space Results",
     institution: "University of Houston",
-    period: "2024 - Present",
-    // codeLink: "https://github.com/saikirananugam",
+    period: "April 2024 - May 2025",
+    codeLink: "https://science.nasa.gov/biological-physical/investigations/lmmbio-2/",
     pdfLink: "https://uh-ir.tdl.org/items/35956565-3c23-43fa-b4a7-2929a3a84f53"
   };
 
@@ -476,7 +476,7 @@ const Research = () => {
             <strong>Title:</strong> {thesis.title}
           </p>
           <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Supervisor:</strong> {thesis.supervisor}</p>
-          <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Department:</strong> {thesis.department}</p>
+          <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Project:</strong> {thesis.project}</p>
           <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Institution:</strong> {thesis.institution}</p>
           <p className="mb-2 text-gray-700 dark:text-gray-300"><strong>Period:</strong> {thesis.period}</p>
           <div className="mt-4">
@@ -484,7 +484,7 @@ const Research = () => {
               View Thesis PDF
             </a>
             <a href={thesis.codeLink} target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 hover:text-blue-800">
-              View Code
+              View Details
             </a>
           </div>
         </motion.div>

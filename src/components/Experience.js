@@ -183,6 +183,18 @@ const Experience = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5 }}
         >
+          <div className="flex justify-center mb-8">
+          <div className="relative w-full max-w-3xl">
+            <iframe
+              className="w-full h-64 md:h-96 rounded-lg shadow-lg"
+              src="https://www.youtube.com/embed/UbIP7x5N2P8"
+              title="YouTube Video"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe>
+          </div>
+        </div>
           Professional Experience
         </motion.h2>
         <VerticalTimeline>
